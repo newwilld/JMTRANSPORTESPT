@@ -44,16 +44,13 @@
             overflow-x: hidden;
         }
 
-        /* Removido o background escuro do body e glass-card, usaremos classes do Tailwind para o tema claro */
-
-        /* SVG Parallax Waves Settings - Como Solicitado */
         .waves {
             position: absolute;
             width: 100%;
             height: 12vh;
             min-height: 80px;
             max-height: 150px;
-            bottom: -1px; /* Remove gaps */
+            bottom: -1px;
             left: 0;
             z-index: 10;
         }
@@ -143,9 +140,7 @@
     <section id="inicio" class="relative w-full h-screen min-h-[600px] flex items-center justify-center pt-20">
         <!-- Background Image -->
         <div class="absolute inset-0 z-0">
-            <!-- Referencing the exact image requested -->
-            <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2000&auto=format&fit=crop" alt="Frota JM Transportes" class="w-full h-full object-cover object-center" />
-            <!-- Gradient overlay for text readability -->
+            <img src="image_aedfe1.jpg" alt="Frota JM Transportes" class="w-full h-full object-cover object-center" />
             <div class="absolute inset-0 bg-gradient-to-b from-brand-dark/90 via-brand-dark/70 to-transparent"></div>
         </div>
 
@@ -165,19 +160,15 @@
             </a>
         </div>
 
-        <!-- Animated Parallax SVG Waves (CSS Based) -->
+        <!-- Animated Parallax SVG Waves -->
         <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <defs>
                 <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
             </defs>
             <g class="parallax">
-                <!-- Pink wave -->
                 <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(244, 97, 193, 0.7)" />
-                <!-- Light Blue wave -->
                 <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(69, 121, 226, 0.6)" />
-                <!-- Darker Blue wave -->
                 <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(52, 97, 193, 0.9)" />
-                <!-- Background color wave matching next section (White) -->
                 <use xlink:href="#gentle-wave" x="48" y="7" fill="#ffffff" />
             </g>
         </svg>
@@ -197,138 +188,110 @@
 
             <!-- Flags Grid -->
             <div class="flex flex-wrap justify-center gap-x-3 gap-y-6 sm:gap-x-6 sm:gap-y-10 max-w-5xl mx-auto">
-                <!-- Bandeiras geradas a partir do FlagCDN -->
-                <!-- 1 -->
                 <div class="flex flex-col items-center gap-2 w-14 sm:w-20 group cursor-default">
                     <img src="https://flagcdn.com/w80/de.png" alt="Alemanha" class="w-12 sm:w-16 h-auto shadow-[0_3px_6px_rgba(0,0,0,0.15)] rounded-[2px] group-hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-[9px] sm:text-[11px] font-bold text-gray-700 text-center uppercase tracking-tighter group-hover:text-brand-blue transition-colors">Alemanha</span>
                 </div>
-                <!-- 2 -->
                 <div class="flex flex-col items-center gap-2 w-14 sm:w-20 group cursor-default">
                     <img src="https://flagcdn.com/w80/at.png" alt="Áustria" class="w-12 sm:w-16 h-auto shadow-[0_3px_6px_rgba(0,0,0,0.15)] rounded-[2px] group-hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-[9px] sm:text-[11px] font-bold text-gray-700 text-center uppercase tracking-tighter group-hover:text-brand-blue transition-colors">Áustria</span>
                 </div>
-                <!-- 3 -->
                 <div class="flex flex-col items-center gap-2 w-14 sm:w-20 group cursor-default">
                     <img src="https://flagcdn.com/w80/be.png" alt="Bélgica" class="w-12 sm:w-16 h-auto shadow-[0_3px_6px_rgba(0,0,0,0.15)] rounded-[2px] group-hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-[9px] sm:text-[11px] font-bold text-gray-700 text-center uppercase tracking-tighter group-hover:text-brand-blue transition-colors">Bélgica</span>
                 </div>
-                <!-- 4 -->
                 <div class="flex flex-col items-center gap-2 w-14 sm:w-20 group cursor-default">
                     <img src="https://flagcdn.com/w80/bg.png" alt="Bulgária" class="w-12 sm:w-16 h-auto shadow-[0_3px_6px_rgba(0,0,0,0.15)] rounded-[2px] group-hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-[9px] sm:text-[11px] font-bold text-gray-700 text-center uppercase tracking-tighter group-hover:text-brand-blue transition-colors">Bulgária</span>
                 </div>
-                <!-- 5 -->
                 <div class="flex flex-col items-center gap-2 w-14 sm:w-20 group cursor-default">
                     <img src="https://flagcdn.com/w80/cy.png" alt="Chipre" class="w-12 sm:w-16 h-auto shadow-[0_3px_6px_rgba(0,0,0,0.15)] rounded-[2px] group-hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-[9px] sm:text-[11px] font-bold text-gray-700 text-center uppercase tracking-tighter group-hover:text-brand-blue transition-colors">Chipre</span>
                 </div>
-                <!-- 6 -->
                 <div class="flex flex-col items-center gap-2 w-14 sm:w-20 group cursor-default">
                     <img src="https://flagcdn.com/w80/hr.png" alt="Croácia" class="w-12 sm:w-16 h-auto shadow-[0_3px_6px_rgba(0,0,0,0.15)] rounded-[2px] group-hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-[9px] sm:text-[11px] font-bold text-gray-700 text-center uppercase tracking-tighter group-hover:text-brand-blue transition-colors">Croácia</span>
                 </div>
-                <!-- 7 -->
                 <div class="flex flex-col items-center gap-2 w-14 sm:w-20 group cursor-default">
                     <img src="https://flagcdn.com/w80/dk.png" alt="Dinamarca" class="w-12 sm:w-16 h-auto shadow-[0_3px_6px_rgba(0,0,0,0.15)] rounded-[2px] group-hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-[9px] sm:text-[11px] font-bold text-gray-700 text-center uppercase tracking-tighter group-hover:text-brand-blue transition-colors">Dinamarca</span>
                 </div>
-                <!-- 8 -->
                 <div class="flex flex-col items-center gap-2 w-14 sm:w-20 group cursor-default">
                     <img src="https://flagcdn.com/w80/sk.png" alt="Eslováquia" class="w-12 sm:w-16 h-auto shadow-[0_3px_6px_rgba(0,0,0,0.15)] rounded-[2px] group-hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-[9px] sm:text-[11px] font-bold text-gray-700 text-center uppercase tracking-tighter group-hover:text-brand-blue transition-colors">Eslováquia</span>
                 </div>
-                <!-- 9 -->
                 <div class="flex flex-col items-center gap-2 w-14 sm:w-20 group cursor-default">
                     <img src="https://flagcdn.com/w80/si.png" alt="Eslovênia" class="w-12 sm:w-16 h-auto shadow-[0_3px_6px_rgba(0,0,0,0.15)] rounded-[2px] group-hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-[9px] sm:text-[11px] font-bold text-gray-700 text-center uppercase tracking-tighter group-hover:text-brand-blue transition-colors">Eslovênia</span>
                 </div>
-                <!-- 10 -->
                 <div class="flex flex-col items-center gap-2 w-14 sm:w-20 group cursor-default">
                     <img src="https://flagcdn.com/w80/es.png" alt="Espanha" class="w-12 sm:w-16 h-auto shadow-[0_3px_6px_rgba(0,0,0,0.15)] rounded-[2px] group-hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-[9px] sm:text-[11px] font-bold text-gray-700 text-center uppercase tracking-tighter group-hover:text-brand-blue transition-colors">Espanha</span>
                 </div>
-                <!-- 11 -->
                 <div class="flex flex-col items-center gap-2 w-14 sm:w-20 group cursor-default">
                     <img src="https://flagcdn.com/w80/ee.png" alt="Estônia" class="w-12 sm:w-16 h-auto shadow-[0_3px_6px_rgba(0,0,0,0.15)] rounded-[2px] group-hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-[9px] sm:text-[11px] font-bold text-gray-700 text-center uppercase tracking-tighter group-hover:text-brand-blue transition-colors">Estônia</span>
                 </div>
-                <!-- 12 -->
                 <div class="flex flex-col items-center gap-2 w-14 sm:w-20 group cursor-default">
                     <img src="https://flagcdn.com/w80/fi.png" alt="Finlândia" class="w-12 sm:w-16 h-auto shadow-[0_3px_6px_rgba(0,0,0,0.15)] rounded-[2px] group-hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-[9px] sm:text-[11px] font-bold text-gray-700 text-center uppercase tracking-tighter group-hover:text-brand-blue transition-colors">Finlândia</span>
                 </div>
-                <!-- 13 -->
                 <div class="flex flex-col items-center gap-2 w-14 sm:w-20 group cursor-default">
                     <img src="https://flagcdn.com/w80/fr.png" alt="França" class="w-12 sm:w-16 h-auto shadow-[0_3px_6px_rgba(0,0,0,0.15)] rounded-[2px] group-hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-[9px] sm:text-[11px] font-bold text-gray-700 text-center uppercase tracking-tighter group-hover:text-brand-blue transition-colors">França</span>
                 </div>
-                <!-- 14 -->
                 <div class="flex flex-col items-center gap-2 w-14 sm:w-20 group cursor-default">
                     <img src="https://flagcdn.com/w80/gr.png" alt="Grécia" class="w-12 sm:w-16 h-auto shadow-[0_3px_6px_rgba(0,0,0,0.15)] rounded-[2px] group-hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-[9px] sm:text-[11px] font-bold text-gray-700 text-center uppercase tracking-tighter group-hover:text-brand-blue transition-colors">Grécia</span>
                 </div>
-                <!-- 15 -->
                 <div class="flex flex-col items-center gap-2 w-14 sm:w-20 group cursor-default">
                     <img src="https://flagcdn.com/w80/hu.png" alt="Hungria" class="w-12 sm:w-16 h-auto shadow-[0_3px_6px_rgba(0,0,0,0.15)] rounded-[2px] group-hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-[9px] sm:text-[11px] font-bold text-gray-700 text-center uppercase tracking-tighter group-hover:text-brand-blue transition-colors">Hungria</span>
                 </div>
-                <!-- 16 -->
                 <div class="flex flex-col items-center gap-2 w-14 sm:w-20 group cursor-default">
                     <img src="https://flagcdn.com/w80/ie.png" alt="Irlanda" class="w-12 sm:w-16 h-auto shadow-[0_3px_6px_rgba(0,0,0,0.15)] rounded-[2px] group-hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-[9px] sm:text-[11px] font-bold text-gray-700 text-center uppercase tracking-tighter group-hover:text-brand-blue transition-colors">Irlanda</span>
                 </div>
-                <!-- 17 -->
                 <div class="flex flex-col items-center gap-2 w-14 sm:w-20 group cursor-default">
                     <img src="https://flagcdn.com/w80/it.png" alt="Itália" class="w-12 sm:w-16 h-auto shadow-[0_3px_6px_rgba(0,0,0,0.15)] rounded-[2px] group-hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-[9px] sm:text-[11px] font-bold text-gray-700 text-center uppercase tracking-tighter group-hover:text-brand-blue transition-colors">Itália</span>
                 </div>
-                <!-- 18 -->
                 <div class="flex flex-col items-center gap-2 w-14 sm:w-20 group cursor-default">
                     <img src="https://flagcdn.com/w80/lv.png" alt="Letônia" class="w-12 sm:w-16 h-auto shadow-[0_3px_6px_rgba(0,0,0,0.15)] rounded-[2px] group-hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-[9px] sm:text-[11px] font-bold text-gray-700 text-center uppercase tracking-tighter group-hover:text-brand-blue transition-colors">Letônia</span>
                 </div>
-                <!-- 19 -->
                 <div class="flex flex-col items-center gap-2 w-14 sm:w-20 group cursor-default">
                     <img src="https://flagcdn.com/w80/lt.png" alt="Lituânia" class="w-12 sm:w-16 h-auto shadow-[0_3px_6px_rgba(0,0,0,0.15)] rounded-[2px] group-hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-[9px] sm:text-[11px] font-bold text-gray-700 text-center uppercase tracking-tighter group-hover:text-brand-blue transition-colors">Lituânia</span>
                 </div>
-                <!-- 20 -->
                 <div class="flex flex-col items-center gap-2 w-14 sm:w-20 group cursor-default">
                     <img src="https://flagcdn.com/w80/lu.png" alt="Luxemburgo" class="w-12 sm:w-16 h-auto shadow-[0_3px_6px_rgba(0,0,0,0.15)] rounded-[2px] group-hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-[9px] sm:text-[11px] font-bold text-gray-700 text-center uppercase tracking-tighter group-hover:text-brand-blue transition-colors">Luxemburgo</span>
                 </div>
-                <!-- 21 -->
                 <div class="flex flex-col items-center gap-2 w-14 sm:w-20 group cursor-default">
                     <img src="https://flagcdn.com/w80/mt.png" alt="Malta" class="w-12 sm:w-16 h-auto shadow-[0_3px_6px_rgba(0,0,0,0.15)] rounded-[2px] group-hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-[9px] sm:text-[11px] font-bold text-gray-700 text-center uppercase tracking-tighter group-hover:text-brand-blue transition-colors">Malta</span>
                 </div>
-                <!-- 22 -->
                 <div class="flex flex-col items-center gap-2 w-14 sm:w-20 group cursor-default">
                     <img src="https://flagcdn.com/w80/nl.png" alt="Países Baixos" class="w-12 sm:w-16 h-auto shadow-[0_3px_6px_rgba(0,0,0,0.15)] rounded-[2px] group-hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-[9px] sm:text-[11px] font-bold text-gray-700 text-center uppercase tracking-tighter group-hover:text-brand-blue transition-colors">Países Baixos</span>
                 </div>
-                <!-- 23 -->
                 <div class="flex flex-col items-center gap-2 w-14 sm:w-20 group cursor-default">
                     <img src="https://flagcdn.com/w80/pl.png" alt="Polônia" class="w-12 sm:w-16 h-auto shadow-[0_3px_6px_rgba(0,0,0,0.15)] rounded-[2px] group-hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-[9px] sm:text-[11px] font-bold text-gray-700 text-center uppercase tracking-tighter group-hover:text-brand-blue transition-colors">Polônia</span>
                 </div>
-                <!-- 24 -->
                 <div class="flex flex-col items-center gap-2 w-14 sm:w-20 group cursor-default">
                     <img src="https://flagcdn.com/w80/pt.png" alt="Portugal" class="w-12 sm:w-16 h-auto shadow-[0_3px_6px_rgba(0,0,0,0.15)] rounded-[2px] group-hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-[9px] sm:text-[11px] font-bold text-gray-700 text-center uppercase tracking-tighter group-hover:text-brand-blue transition-colors">Portugal</span>
                 </div>
-                <!-- 25 -->
                 <div class="flex flex-col items-center gap-2 w-14 sm:w-20 group cursor-default">
                     <img src="https://flagcdn.com/w80/cz.png" alt="Rep. Checa" class="w-12 sm:w-16 h-auto shadow-[0_3px_6px_rgba(0,0,0,0.15)] rounded-[2px] group-hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-[9px] sm:text-[11px] font-bold text-gray-700 text-center uppercase tracking-tighter group-hover:text-brand-blue transition-colors">Rep. Checa</span>
                 </div>
-                <!-- 26 -->
                 <div class="flex flex-col items-center gap-2 w-14 sm:w-20 group cursor-default">
                     <img src="https://flagcdn.com/w80/ro.png" alt="Romênia" class="w-12 sm:w-16 h-auto shadow-[0_3px_6px_rgba(0,0,0,0.15)] rounded-[2px] group-hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-[9px] sm:text-[11px] font-bold text-gray-700 text-center uppercase tracking-tighter group-hover:text-brand-blue transition-colors">Romênia</span>
                 </div>
-                <!-- 27 -->
                 <div class="flex flex-col items-center gap-2 w-14 sm:w-20 group cursor-default">
                     <img src="https://flagcdn.com/w80/se.png" alt="Suécia" class="w-12 sm:w-16 h-auto shadow-[0_3px_6px_rgba(0,0,0,0.15)] rounded-[2px] group-hover:-translate-y-1 transition-transform duration-300">
                     <span class="text-[9px] sm:text-[11px] font-bold text-gray-700 text-center uppercase tracking-tighter group-hover:text-brand-blue transition-colors">Suécia</span>
@@ -340,7 +303,6 @@
                 <div class="h-px bg-gradient-to-r from-transparent to-brand-blue flex-1 max-w-[50px] sm:max-w-[150px] hidden sm:block"></div>
                 
                 <div class="flex items-center gap-3 sm:gap-5">
-                    <!-- Circle of Stars Left -->
                     <svg class="w-6 h-6 sm:w-8 sm:h-8 drop-shadow-sm flex-shrink-0" viewBox="-50 -50 100 100" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <g id="star-icon">
@@ -354,7 +316,6 @@
                         Europa em Movimento, Juntos Sem Fronteiras.
                     </h3>
                     
-                    <!-- Circle of Stars Right -->
                     <svg class="w-6 h-6 sm:w-8 sm:h-8 drop-shadow-sm flex-shrink-0" viewBox="-50 -50 100 100" xmlns="http://www.w3.org/2000/svg">
                         <use href="#star-icon"/><use href="#star-icon" transform="rotate(30)"/><use href="#star-icon" transform="rotate(60)"/><use href="#star-icon" transform="rotate(90)"/><use href="#star-icon" transform="rotate(120)"/><use href="#star-icon" transform="rotate(150)"/><use href="#star-icon" transform="rotate(180)"/><use href="#star-icon" transform="rotate(210)"/><use href="#star-icon" transform="rotate(240)"/><use href="#star-icon" transform="rotate(270)"/><use href="#star-icon" transform="rotate(300)"/><use href="#star-icon" transform="rotate(330)"/>
                     </svg>
@@ -365,13 +326,13 @@
 
         </div>
     </section>
+
     <section id="servicos" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-20 bg-white">
         <div class="text-center mb-16">
             <span class="text-brand-blue text-sm font-bold uppercase tracking-widest">A Nossa Oferta</span>
             <h2 class="text-3xl sm:text-4xl font-black font-display text-gray-900 mt-2">Soluções Logísticas</h2>
         </div>
 
-        <!-- Exactly 3 blocks as requested -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Service 1 -->
             <div class="bg-white border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,85,255,0.15)] transition-all duration-300 p-8 rounded-2xl flex flex-col items-center text-center">
@@ -416,13 +377,11 @@
                 <h2 class="text-3xl sm:text-4xl font-black font-display text-gray-900 mt-2">Equipamento de Última Geração</h2>
             </div>
 
-            <!-- Grid adjusted perfectly for 5 photos (3 top, 2 bottom centered) -->
             <div class="flex flex-wrap justify-center gap-6 lg:gap-8">
                 
                 <!-- Fleet 1 -->
                 <div class="group cursor-pointer w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-22px)]">
                     <div class="relative h-56 sm:h-64 rounded-xl overflow-hidden mb-4 border border-gray-200 shadow-sm">
-                        <!-- Placeholder Image (Replace with your actual images) -->
                         <img src="https://images.unsplash.com/photo-1586191582056-a36c5352c8a1?q=80&w=800&auto=format&fit=crop" alt="Camião 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     </div>
                     <div class="text-center">
@@ -479,6 +438,9 @@
         </div>
     </section>
 
+    <!-- ============================================ -->
+    <!-- SEÇÃO DE COTAÇÃO - FORMSUBMIT INTEGRADO     -->
+    <!-- ============================================ -->
     <section id="cotacao" class="py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto bg-white">
         <div class="bg-white rounded-3xl p-6 sm:p-12 border border-gray-200 shadow-2xl text-center">
             
@@ -487,41 +449,57 @@
                 Preencha o formulário abaixo com os dados da sua carga. A nossa equipa irá responder com a melhor proposta logística o mais rápido possível.
             </p>
 
-            <form class="space-y-6 text-left" onsubmit="event.preventDefault(); document.getElementById('success-msg').classList.remove('hidden');">
+            <!-- FORMULÁRIO COM FORMSUBMIT -->
+            <form id="cotacao-form" class="space-y-6 text-left" action="https://formsubmit.co/ajax/jm@transportespt.com" method="POST">
+                
+                <!-- Configurações FormSubmit -->
+                <input type="hidden" name="_subject" value="Nova Cotação - JM Transportes">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="false">
+                
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
                         <label class="block text-xs font-bold text-gray-500 uppercase mb-2">Nome / Empresa</label>
-                        <input type="text" required class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors">
+                        <input type="text" name="Nome" required class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors">
                     </div>
                     <div>
-                        <label class="block text-xs font-bold text-gray-500 uppercase mb-2">Contacto / Email</label>
-                        <input type="text" required class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors">
+                        <label class="block text-xs font-bold text-gray-500 uppercase mb-2">Email</label>
+                        <input type="email" name="Email" required class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors">
                     </div>
                 </div>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
                         <label class="block text-xs font-bold text-gray-500 uppercase mb-2">Origem</label>
-                        <input type="text" placeholder="Ex: Porto" required class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors">
+                        <input type="text" name="Origem" placeholder="Ex: Porto" required class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors">
                     </div>
                     <div>
                         <label class="block text-xs font-bold text-gray-500 uppercase mb-2">Destino</label>
-                        <input type="text" placeholder="Ex: Madrid" required class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors">
+                        <input type="text" name="Destino" placeholder="Ex: Madrid" required class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors">
                     </div>
                 </div>
 
                 <div>
                     <label class="block text-xs font-bold text-gray-500 uppercase mb-2">Detalhes da Mercadoria</label>
-                    <textarea rows="4" placeholder="Tipo de carga, peso, dimensões..." required class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors resize-none"></textarea>
+                    <textarea rows="4" name="Detalhes" placeholder="Tipo de carga, peso, dimensões..." required class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors resize-none"></textarea>
                 </div>
 
+                <!-- Mensagens de feedback -->
                 <div id="success-msg" class="hidden bg-green-50 text-green-700 border border-green-200 p-4 rounded-lg text-center text-sm font-medium">
-                    Mensagem enviada com sucesso! Entraremos em contacto brevemente.
+                    ✅ Cotação enviada com sucesso! Responderemos em breve.
+                </div>
+                
+                <div id="error-msg" class="hidden bg-red-50 text-red-700 border border-red-200 p-4 rounded-lg text-center text-sm font-medium">
+                    ❌ Erro ao enviar. Tente novamente ou ligue para nós.
                 </div>
 
-                <button type="submit" class="w-full sm:w-auto mx-auto bg-brand-blue hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-lg uppercase tracking-wide transition-colors flex items-center justify-center gap-2 mt-4 shadow-lg shadow-brand-blue/30">
+                <button type="submit" id="submit-btn" class="w-full sm:w-auto mx-auto bg-brand-blue hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-lg uppercase tracking-wide transition-colors flex items-center justify-center gap-2 mt-4 shadow-lg shadow-brand-blue/30">
                     <i class="fa-solid fa-paper-plane"></i>
-                    Solicitar Orçamento
+                    <span id="btn-text">Solicitar Orçamento</span>
+                    <span id="btn-loading" class="hidden">
+                        <i class="fa-solid fa-spinner fa-spin"></i> Enviando...
+                    </span>
                 </button>
             </form>
             
@@ -549,9 +527,11 @@
         </div>
     </footer>
 
-    <!-- Script limpo e devidamente fechado sem Three.js -->
+    <!-- JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            
+            // ============ MENU MOBILE ============
             const btn = document.getElementById('mobile-menu-btn');
             const menu = document.getElementById('mobile-menu');
             
@@ -576,6 +556,55 @@
                         icon.classList.remove('fa-xmark');
                         icon.classList.add('fa-bars');
                     });
+                });
+            }
+
+            // ============ FORMSUBMIT AJAX ============
+            const form = document.getElementById('cotacao-form');
+            const successMsg = document.getElementById('success-msg');
+            const errorMsg = document.getElementById('error-msg');
+            const submitBtn = document.getElementById('submit-btn');
+            const btnText = document.getElementById('btn-text');
+            const btnLoading = document.getElementById('btn-loading');
+
+            if (form) {
+                form.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    
+                    // Mostrar loading
+                    successMsg.classList.add('hidden');
+                    errorMsg.classList.add('hidden');
+                    btnText.classList.add('hidden');
+                    btnLoading.classList.remove('hidden');
+                    submitBtn.disabled = true;
+                    submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
+
+                    try {
+                        const response = await fetch(form.action, {
+                            method: 'POST',
+                            body: new FormData(form),
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
+
+                        if (response.ok) {
+                            successMsg.classList.remove('hidden');
+                            form.reset();
+                            // Scroll suave até a mensagem de sucesso
+                            successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        } else {
+                            errorMsg.classList.remove('hidden');
+                        }
+                    } catch (error) {
+                        errorMsg.classList.remove('hidden');
+                    } finally {
+                        // Reset botão
+                        btnText.classList.remove('hidden');
+                        btnLoading.classList.add('hidden');
+                        submitBtn.disabled = false;
+                        submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+                    }
                 });
             }
         });
