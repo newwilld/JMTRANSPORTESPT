@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JM Transportes | Soluções em Transporte Expresso</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0055ff',
+                            dark: '#0a0f1c',
+                            card: '#111827',
+                            border: '#1f2937'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        /* Removido o background escuro do body e glass-card, usaremos classes do Tailwind para o tema claro */
+
+        /* SVG Parallax Waves Settings - Como Solicitado */
+        .waves {
+            position: absolute;
+            width: 100%;
+            height: 12vh;
+            min-height: 80px;
+            max-height: 150px;
+            bottom: -1px; /* Remove gaps */
+            left: 0;
+            z-index: 10;
+        }
+
+        .parallax > use {
+            animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+        }
+        
+        .parallax > use:nth-child(1) {
+            animation-delay: -2s;
+            animation-duration: 7s;
+        }
+        .parallax > use:nth-child(2) {
+            animation-delay: -3s;
+            animation-duration: 10s;
+        }
+        .parallax > use:nth-child(3) {
+            animation-delay: -4s;
+            animation-duration: 13s;
+        }
+        .parallax > use:nth-child(4) {
+            animation-delay: -5s;
+            animation-duration: 20s;
+        }
+
+        @keyframes move-forever {
+            0% {
+                transform: translate3d(-90px, 0, 0);
+            }
+            100% {
+                transform: translate3d(85px, 0, 0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .waves {
+                height: 60px;
+                min-height: 60px;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen relative">
+
+    <header class="fixed w-full top-0 z-50 bg-brand-dark/90 backdrop-blur-md border-b border-brand-border transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="flex items-center gap-2 group">
+                        <div class="text-brand-blue text-3xl font-black italic tracking-tighter">
+                            JM<span class="text-white text-xl ml-1 not-italic font-bold">Transportes</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#inicio" class="text-sm font-medium text-gray-300 hover:text-brand-blue transition-colors">Início</a>
+                    <a href="#servicos" class="text-sm font-medium text-gray-300 hover:text-brand-blue transition-colors">Serviços</a>
+                    <a href="#frota" class="text-sm font-medium text-gray-300 hover:text-brand-blue transition-colors">A Nossa Frota</a>
+                    <a href="#cotacao" class="bg-brand-blue hover:bg-blue-600 text-white px-5 py-2.5 rounded-lg text-sm font-bold uppercase tracking-wide transition-all shadow-lg shadow-brand-blue/30">
+                        Pedir Cotação
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white p-2 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-t border-brand-border">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#inicio" class="block px-3 py-3 text-base font-medium text-gray-300 hover:bg-gray-800 rounded-md">Início</a>
+                <a href="#servicos" class="block px-3 py-3 text-base font-medium text-gray-300 hover:bg-gray-800 rounded-md">Serviços</a>
+                <a href="#frota" class="block px-3 py-3 text-base font-medium text-gray-300 hover:bg-gray-800 rounded-md">A Nossa Frota</a>
+                <a href="#cotacao" class="block mt-4 px-3 py-3 text-center text-base font-bold text-white bg-brand-blue rounded-md uppercase">Pedir Cotação</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="inicio" class="relative w-full h-screen min-h-[600px] flex items-center justify-center pt-20">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <!-- Referencing the exact image requested -->
+            <img src="image_aedfe1.jpg" alt="Frota JM Transportes" class="w-full h-full object-cover object-center" />
+            <!-- Gradient overlay for text readability -->
+            <div class="absolute inset-0 bg-gradient-to-b from-brand-dark/90 via-brand-dark/70 to-transparent"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-20 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-black font-display text-white mb-6 leading-tight drop-shadow-xl">
+                Soluções em Transporte <br class="hidden sm:block"/> Expresso Rodoviário
+            </h1>
+            
+            <p class="text-base sm:text-lg text-gray-200 mb-10 max-w-2xl font-medium drop-shadow-md">
+                Fretes Rápidos, Seguros e Dentro do Prazo para toda a União Europeia.
+            </p>
+            
+            <a href="#cotacao" class="bg-brand-blue hover:bg-blue-600 text-white font-bold text-sm sm:text-base px-8 py-4 rounded-xl uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(0,85,255,0.4)] flex items-center gap-3 group">
+                Pedir Cotação
+                <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+            </a>
+        </div>
+
+        <!-- Animated Parallax SVG Waves (CSS Based) -->
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <!-- Pink wave -->
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(244, 97, 193, 0.7)" />
+                <!-- Light Blue wave -->
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(69, 121, 226, 0.6)" />
+                <!-- Darker Blue wave -->
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(52, 97, 193, 0.9)" />
+                <!-- Background color wave matching next section (White) -->
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#ffffff" />
+            </g>
+        </svg>
+    </section>
+
+    <section id="servicos" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-20 bg-white">
+        <div class="text-center mb-16">
+            <span class="text-brand-blue text-sm font-bold uppercase tracking-widest">A Nossa Oferta</span>
+            <h2 class="text-3xl sm:text-4xl font-black font-display text-gray-900 mt-2">Soluções Logísticas</h2>
+        </div>
+
+        <!-- Exactly 3 blocks as requested -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-white border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,85,255,0.15)] transition-all duration-300 p-8 rounded-2xl flex flex-col items-center text-center">
+                <div class="w-16 h-16 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-brand-blue mb-6 text-2xl">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 font-display mb-4">Transporte Expresso</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Serviço dedicado de alta urgência para encomendas críticas. Prazos rigorosos com viaturas prontas a arrancar.
+                </p>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-white border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,85,255,0.15)] transition-all duration-300 p-8 rounded-2xl flex flex-col items-center text-center relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-brand-blue"></div>
+                <div class="w-16 h-16 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-brand-blue mb-6 text-2xl">
+                    <i class="fa-solid fa-truck"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 font-display mb-4">Carga Lotação (FTL)</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Camião completo exclusivo para a sua mercadoria. Rota direta ponto a ponto com máxima segurança e capacidade.
+                </p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-white border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,85,255,0.15)] transition-all duration-300 p-8 rounded-2xl flex flex-col items-center text-center">
+                <div class="w-16 h-16 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-brand-blue mb-6 text-2xl">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 font-display mb-4">Carga Fracionada (LTL)</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Solução económica para envios menores. Consolidação eficiente de paletes com saídas regulares para toda a Europa.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="frota" class="py-24 bg-gray-50 border-y border-gray-200 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-brand-blue text-sm font-bold uppercase tracking-widest">Frota Própria</span>
+                <h2 class="text-3xl sm:text-4xl font-black font-display text-gray-900 mt-2">Equipamento de Última Geração</h2>
+            </div>
+
+            <!-- Grid adjusted perfectly for 5 photos (3 top, 2 bottom centered) -->
+            <div class="flex flex-wrap justify-center gap-6 lg:gap-8">
+                
+                <!-- Fleet 1 -->
+                <div class="group cursor-pointer w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-22px)]">
+                    <div class="relative h-56 sm:h-64 rounded-xl overflow-hidden mb-4 border border-gray-200 shadow-sm">
+                        <!-- Placeholder Image (Replace with your actual images) -->
+                        <img src="https://images.unsplash.com/photo-1586191582056-a36c5352c8a1?q=80&w=800&auto=format&fit=crop" alt="Camião 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-lg font-bold text-gray-900 font-display">Tractor Scania R500</h3>
+                        <p class="text-sm text-brand-blue font-medium mt-1">Longo Curso</p>
+                    </div>
+                </div>
+
+                <!-- Fleet 2 -->
+                <div class="group cursor-pointer w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-22px)]">
+                    <div class="relative h-56 sm:h-64 rounded-xl overflow-hidden mb-4 border border-gray-200 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1616423640778-28d1b53229bd?q=80&w=800&auto=format&fit=crop" alt="Camião 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-lg font-bold text-gray-900 font-display">Mercedes Actros L</h3>
+                        <p class="text-sm text-brand-blue font-medium mt-1">Carga Geral</p>
+                    </div>
+                </div>
+
+                <!-- Fleet 3 -->
+                <div class="group cursor-pointer w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-22px)]">
+                    <div class="relative h-56 sm:h-64 rounded-xl overflow-hidden mb-4 border border-gray-200 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=800&auto=format&fit=crop" alt="Camião 3" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-lg font-bold text-gray-900 font-display">Semi-Reboque Lona</h3>
+                        <p class="text-sm text-brand-blue font-medium mt-1">33 Paletes</p>
+                    </div>
+                </div>
+
+                <!-- Fleet 4 -->
+                <div class="group cursor-pointer w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-22px)]">
+                    <div class="relative h-56 sm:h-64 rounded-xl overflow-hidden mb-4 border border-gray-200 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?q=80&w=800&auto=format&fit=crop" alt="Camião 4" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-lg font-bold text-gray-900 font-display">Furgão Expresso</h3>
+                        <p class="text-sm text-brand-blue font-medium mt-1">Entregas 24h</p>
+                    </div>
+                </div>
+
+                <!-- Fleet 5 -->
+                <div class="group cursor-pointer w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-22px)]">
+                    <div class="relative h-56 sm:h-64 rounded-xl overflow-hidden mb-4 border border-gray-200 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=800&auto=format&fit=crop" alt="Camião 5" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-lg font-bold text-gray-900 font-display">Camião Rígido</h3>
+                        <p class="text-sm text-brand-blue font-medium mt-1">Distribuição Local</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="cotacao" class="py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto bg-white">
+        <div class="bg-white rounded-3xl p-6 sm:p-12 border border-gray-200 shadow-2xl text-center">
+            
+            <h2 class="text-3xl sm:text-4xl font-black font-display text-gray-900 mb-4">Pedir Cotação</h2>
+            <p class="text-gray-600 mb-10 leading-relaxed text-sm sm:text-base max-w-2xl mx-auto">
+                Preencha o formulário abaixo com os dados da sua carga. A nossa equipa irá responder com a melhor proposta logística o mais rápido possível.
+            </p>
+
+            <form class="space-y-6 text-left" onsubmit="event.preventDefault(); document.getElementById('success-msg').classList.remove('hidden');">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-500 uppercase mb-2">Nome / Empresa</label>
+                        <input type="text" required class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-500 uppercase mb-2">Contacto / Email</label>
+                        <input type="text" required class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors">
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-500 uppercase mb-2">Origem</label>
+                        <input type="text" placeholder="Ex: Porto" required class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-500 uppercase mb-2">Destino</label>
+                        <input type="text" placeholder="Ex: Madrid" required class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-gray-500 uppercase mb-2">Detalhes da Mercadoria</label>
+                    <textarea rows="4" placeholder="Tipo de carga, peso, dimensões..." required class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors resize-none"></textarea>
+                </div>
+
+                <div id="success-msg" class="hidden bg-green-50 text-green-700 border border-green-200 p-4 rounded-lg text-center text-sm font-medium">
+                    Mensagem enviada com sucesso! Entraremos em contacto brevemente.
+                </div>
+
+                <button type="submit" class="w-full sm:w-auto mx-auto bg-brand-blue hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-lg uppercase tracking-wide transition-colors flex items-center justify-center gap-2 mt-4 shadow-lg shadow-brand-blue/30">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Solicitar Orçamento
+                </button>
+            </form>
+            
+        </div>
+    </section>
+
+    <footer class="bg-[#05080f] py-12 border-t border-gray-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-brand-blue text-2xl font-black italic tracking-tighter">
+                JM<span class="text-white text-lg ml-1 not-italic font-bold">Transportes</span>
+            </div>
+            
+            <p class="text-gray-500 text-sm text-center md:text-left">
+                &copy; 2026 JM Transportes. Todos os direitos reservados.
+            </p>
+            
+            <div class="flex gap-4">
+                <a href="#" class="w-10 h-10 rounded-full bg-brand-border flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-blue transition-colors">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-brand-border flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-blue transition-colors">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script limpo e devidamente fechado sem Three.js -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            
+            if (btn && menu) {
+                const icon = btn.querySelector('i');
+
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                    if (menu.classList.contains('hidden')) {
+                        icon.classList.remove('fa-xmark');
+                        icon.classList.add('fa-bars');
+                    } else {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-xmark');
+                    }
+                });
+
+                const mobileLinks = menu.querySelectorAll('a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.add('hidden');
+                        icon.classList.remove('fa-xmark');
+                        icon.classList.add('fa-bars');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
