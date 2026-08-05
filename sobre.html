@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós | JM Transportes</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0055ff',
+                            dark: '#0a0f1c',
+                            card: '#111827',
+                            border: '#1f2937'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+        
+        .check-icon {
+            color: #0055ff;
+        }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen bg-gray-50">
+
+    <!-- Header (idêntico ao index.html) -->
+    <header class="fixed w-full top-0 z-50 bg-brand-dark/90 backdrop-blur-md border-b border-brand-border transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 group">
+                        <img src="https://i.ibb.co/Hptqfjnb/JM-CDR.webp" alt="JM Transportes" class="h-12 w-auto drop-shadow-md">
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-sm font-medium text-gray-300 hover:text-brand-blue transition-colors">Início</a>
+                    <a href="servicos.html" class="text-sm font-medium text-gray-300 hover:text-brand-blue transition-colors">Serviços</a>
+                    <a href="index.html#frota" class="text-sm font-medium text-gray-300 hover:text-brand-blue transition-colors">A Nossa Frota</a>
+                    <a href="sobre.html" class="text-sm font-medium text-brand-blue transition-colors">Sobre</a>
+                    <a href="index.html#cotacao" class="bg-brand-blue hover:bg-blue-600 text-white px-5 py-2.5 rounded-lg text-sm font-bold uppercase tracking-wide transition-all shadow-lg shadow-brand-blue/30">
+                        Pedir Cotação
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white p-2 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-t border-brand-border">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-3 text-base font-medium text-gray-300 hover:bg-gray-800 rounded-md">Início</a>
+                <a href="servicos.html" class="block px-3 py-3 text-base font-medium text-gray-300 hover:bg-gray-800 rounded-md">Serviços</a>
+                <a href="index.html#frota" class="block px-3 py-3 text-base font-medium text-gray-300 hover:bg-gray-800 rounded-md">A Nossa Frota</a>
+                <a href="sobre.html" class="block px-3 py-3 text-base font-medium text-brand-blue hover:bg-gray-800 rounded-md">Sobre</a>
+                <a href="index.html#cotacao" class="block mt-4 px-3 py-3 text-center text-base font-bold text-white bg-brand-blue rounded-md uppercase">Pedir Cotação</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="flex-grow pt-20">
+        
+        <!-- Hero Section -->
+        <section class="relative bg-brand-dark py-24 sm:py-32 px-4 sm:px-6 lg:px-8">
+            <div class="absolute inset-0 opacity-10">
+                <img src="https://iili.io/CgTiFUB.webp" alt="Background" class="w-full h-full object-cover">
+            </div>
+            <div class="relative z-10 max-w-7xl mx-auto text-center">
+                <span class="text-brand-blue text-sm font-bold uppercase tracking-widest">A Nossa História</span>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-black font-display text-white mt-4 mb-6">
+                    Sobre a Empresa
+                </h1>
+                <p class="text-xl sm:text-2xl text-brand-blue font-display font-bold max-w-3xl mx-auto">
+                    Entender para Atender
+                </p>
+            </div>
+        </section>
+
+        <!-- Conteúdo Sobre -->
+        <section class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+            
+            <!-- NOVO: Entender para Atender - Introdução -->
+            <div class="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-8 sm:p-12 mb-8 border border-gray-100 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-brand-blue"></div>
+                <div class="text-center mb-8">
+                    <div class="text-4xl mb-4">🔍</div>
+                    <h2 class="text-2xl sm:text-3xl font-black font-display text-gray-900 mb-4">Entender para Atender</h2>
+                    <p class="text-gray-600 leading-relaxed text-base sm:text-lg max-w-3xl mx-auto">
+                        Na JM Transportes, acreditamos que oferecer um bom serviço começa por ouvir e compreender de verdade o que o cliente precisa.
+                    </p>
+                </div>
+                
+                <div class="text-center mb-6">
+                    <div class="text-3xl mb-3">🚚</div>
+                    <h3 class="text-xl font-bold font-display text-gray-900 mb-6">Nossa missão é entregar soluções logísticas com:</h3>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-6 sm:gap-12 mb-8">
+                    <div class="flex items-center gap-3 justify-center">
+                        <span class="text-brand-blue text-xl">✔️</span>
+                        <span class="text-gray-700 font-semibold text-lg">Experiência</span>
+                    </div>
+                    <div class="flex items-center gap-3 justify-center">
+                        <span class="text-brand-blue text-xl">✔️</span>
+                        <span class="text-gray-700 font-semibold text-lg">Segurança</span>
+                    </div>
+                    <div class="flex items-center gap-3 justify-center">
+                        <span class="text-brand-blue text-xl">✔️</span>
+                        <span class="text-gray-700 font-semibold text-lg">Agilidade</span>
+                    </div>
+                </div>
+                
+                <div class="text-center bg-blue-50 rounded-xl p-6 border border-blue-100">
+                    <p class="text-gray-700 font-medium text-lg">💬 Conte com a JM para cuidar do seu transporte com excelência e compromisso.</p>
+                </div>
+            </div>
+
+            <!-- NOVO: Missão, Visão e Valores -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                
+                <!-- Missão -->
+                <div class="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-8 border border-gray-100 hover:-translate-y-1 transition-transform duration-300">
+                    <div class="w-14 h-14 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-brand-blue text-2xl mb-5 mx-auto">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-xl font-black font-display text-gray-900 text-center mb-4">Missão</h3>
+                    <p class="text-gray-600 text-center leading-relaxed">
+                        Garantir o transporte ágil e seguro de mercadorias, oferecendo atendimento de excelência com foco em qualidade, confiança e transparência, disponíveis 24 horas por dia, todos os dias do ano.
+                    </p>
+                </div>
+
+                <!-- Visão -->
+                <div class="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-8 border border-gray-100 hover:-translate-y-1 transition-transform duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-brand-blue"></div>
+                    <div class="w-14 h-14 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-brand-blue text-2xl mb-5 mx-auto">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3 class="text-xl font-black font-display text-gray-900 text-center mb-4">Visão</h3>
+                    <p class="text-gray-600 text-center leading-relaxed">
+                        Ser reconhecida como referência em transporte e logística nacional e internacional, destacando-se pela agilidade, segurança e qualidade dos serviços prestados.
+                    </p>
+                </div>
+
+                <!-- Valores -->
+                <div class="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-8 border border-gray-100 hover:-translate-y-1 transition-transform duration-300">
+                    <div class="w-14 h-14 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-brand-blue text-2xl mb-5 mx-auto">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <h3 class="text-xl font-black font-display text-gray-900 text-center mb-4">Valores</h3>
+                    <ul class="text-gray-600 space-y-3">
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-blue mt-1 flex-shrink-0">✔️</span>
+                            <span>Comprometimento com prazos e qualidade</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-blue mt-1 flex-shrink-0">✔️</span>
+                            <span>Transparência nas relações</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-blue mt-1 flex-shrink-0">✔️</span>
+                            <span>Integridade e profissionalismo</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-blue mt-1 flex-shrink-0">✔️</span>
+                            <span>Respeito ao meio ambiente</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-blue mt-1 flex-shrink-0">✔️</span>
+                            <span>Garantia de confiança em cada entrega</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Missão (detalhada) -->
+            <div class="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-8 sm:p-12 mb-8 border border-gray-100">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-brand-blue text-xl flex-shrink-0">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-black font-display text-gray-900 mb-4">A Nossa Missão</h2>
+                        <p class="text-gray-600 leading-relaxed text-base sm:text-lg">
+                            A JM Transportes nasceu com a missão de oferecer soluções logísticas confiáveis e de alto desempenho, atendendo clientes em todo o território nacional e internacional com foco em pontualidade, segurança e agilidade.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Atuação -->
+            <div class="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-8 sm:p-12 mb-8 border border-gray-100">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-brand-blue text-xl flex-shrink-0">
+                        <i class="fa-solid fa-road"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-black font-display text-gray-900 mb-4">Atuação no Setor</h2>
+                        <p class="text-gray-600 leading-relaxed text-base sm:text-lg">
+                            Com uma atuação sólida no setor de transportes, especializamo-nos no transporte rodoviário de cargas gerais e produtos com necessidades específicas, garantindo que cada entrega chega ao seu destino com máxima eficiência e controle.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tecnologia -->
+            <div class="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-8 sm:p-12 mb-8 border border-gray-100 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-brand-blue"></div>
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-brand-blue text-xl flex-shrink-0">
+                        <i class="fa-solid fa-satellite-dish"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-black font-display text-gray-900 mb-4">Tecnologia e Monitoramento</h2>
+                        <p class="text-gray-600 leading-relaxed text-base sm:text-lg">
+                            Nosso compromisso com a qualidade do serviço é reforçado por uma frota moderna e equipada com tecnologia de rastreamento em tempo real, proporcionando monitoramento contínuo, maior controle operacional e tranquilidade para nossos clientes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Estrutura -->
+            <div class="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-8 sm:p-12 mb-8 border border-gray-100">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-brand-blue text-xl flex-shrink-0">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-black font-display text-gray-900 mb-4">Estrutura 24/7</h2>
+                        <p class="text-gray-600 leading-relaxed text-base sm:text-lg">
+                            A estrutura da JM Transportes conta com base própria, área de logística organizada e um time experiente que atua 24 horas por dia, 7 dias por semana, focado em superar prazos e expectativas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Compromisso -->
+            <div class="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-8 sm:p-12 mb-8 border border-gray-100">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-brand-blue text-xl flex-shrink-0">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-black font-display text-gray-900 mb-4">Compromisso com a Excelência</h2>
+                        <p class="text-gray-600 leading-relaxed text-base sm:text-lg">
+                            Mais do que transportar, a JM Transportes conecta empresas aos seus clientes com responsabilidade, respeito ao meio ambiente e excelência nos processos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Evolução -->
+            <div class="bg-brand-dark rounded-2xl shadow-2xl p-8 sm:p-12 text-center">
+                <div class="w-16 h-16 rounded-full bg-brand-blue/20 border border-brand-blue/40 flex items-center justify-center text-brand-blue text-2xl mx-auto mb-6">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-black font-display text-white mb-4">Em Constante Evolução</h2>
+                <p class="text-gray-300 leading-relaxed text-base sm:text-lg max-w-2xl mx-auto">
+                    Estamos em constante evolução, investindo em tecnologia, capacitação da equipe e melhoria contínua, com o objetivo de sermos uma das maiores referências no transporte rodoviário europeu.
+                </p>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center mt-16">
+                <a href="index.html#cotacao" class="inline-flex items-center gap-3 bg-brand-blue hover:bg-blue-600 text-white font-bold text-sm sm:text-base px-8 py-4 rounded-xl uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(0,85,255,0.4)] group">
+                    Solicitar Orçamento
+                    <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (idêntico ao index.html) -->
+    <footer class="bg-[#05080f] py-12 border-t border-gray-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            
+            <img src="https://i.ibb.co/Hptqfjnb/JM-CDR.webp" alt="JM Transportes" class="h-10 w-auto">
+            
+            <p class="text-gray-500 text-sm text-center md:text-left">
+                &copy; 2026 JM Transportes. Todos os direitos reservados.
+            </p>
+            
+            <div class="flex gap-4">
+                <a href="#" class="w-10 h-10 rounded-full bg-brand-border flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-blue transition-colors">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-brand-border flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-blue transition-colors">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript para Menu Mobile -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            
+            if (btn && menu) {
+                const icon = btn.querySelector('i');
+
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                    if (menu.classList.contains('hidden')) {
+                        icon.classList.remove('fa-xmark');
+                        icon.classList.add('fa-bars');
+                    } else {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-xmark');
+                    }
+                });
+
+                const mobileLinks = menu.querySelectorAll('a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.add('hidden');
+                        icon.classList.remove('fa-xmark');
+                        icon.classList.add('fa-bars');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
